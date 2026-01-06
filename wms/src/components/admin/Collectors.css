@@ -1,0 +1,102 @@
+.collectors-container {
+  padding: 2rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.collectors-header {
+  margin-bottom: 2rem;
+}
+
+.collectors-header h1 {
+  color: #1e293b;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.collectors-header p {
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+/* Table Styling */
+.table-responsive {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.collectors-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.collectors-table th {
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.collectors-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.collectors-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Area Badge */
+.area-badge {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Remove Button */
+.remove-btn {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #dc2626;
+  color: white;
+  border-color: #dc2626;
+}
+
+/* Empty State */
+.no-data {
+  text-align: center;
+  padding: 3rem !important;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .collectors-table {
+    font-size: 0.8rem;
+  }
+  .remove-btn {
+    padding: 4px 8px;
+  }
+}

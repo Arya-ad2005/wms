@@ -1,0 +1,107 @@
+/* --- Contact.css --- */
+
+/* 1. Page Wrapper */
+.contact-page-wrapper {
+    min-height: calc(100vh - 70px); /* Full height minus Navbar */
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* 2. Contact Form Card */
+.contact-form-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.contact-heading {
+    color: #28a745; /* Bootstrap Success Green */
+    font-weight: 700;
+}
+
+.cta-send-button {
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-send-button:hover {
+    background-color: #1e7e34 !important;
+}
+
+/* 3. Contact Info Block (Right Column) */
+.contact-info-block {
+    position: relative;
+    height: 100%;
+    min-height: 500px; /* Ensure a minimum height for the visual block */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-info-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    /* Dim and slightly desaturate the image for better text readability */
+    filter: brightness(40%) grayscale(10%);
+}
+
+.info-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    padding: 40px;
+    color: white; /* White text on the dark background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Subtle vertical gradient to enhance background depth */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.info-overlay h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    border-bottom: 3px solid #28a745;
+    padding-bottom: 10px;
+    margin-bottom: 40px !important;
+}
+
+.info-item {
+    margin-bottom: 30px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #28a745; /* Green icon color */
+    margin-right: 15px;
+}
+
+.info-item p {
+    display: inline;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* 4. Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-info-block {
+        min-height: 350px; /* Reduce height on mobile */
+    }
+    .info-overlay {
+        padding: 30px;
+    }
+    .info-overlay h2 {
+        font-size: 2rem;
+    }
+}

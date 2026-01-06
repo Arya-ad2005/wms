@@ -1,0 +1,79 @@
+/* Ensure the main layout accommodates the fixed sidebar */
+.collecter-dashboard-layout {
+  display: flex; /* Use flexbox for the main layout */
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  background-color: #f4f7f6; /* Light background for the dashboard */
+}
+
+/* Main content area to the right of the sidebar */
+.collecter-main-content {
+  flex-grow: 1; /* Allows the main content to take up remaining space */
+  margin-left: 250px; /* Adjust this to match the width of your sidebar */
+  padding: 30px; /* Padding around the content */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-title {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.dashboard-summary-cards {
+  display: grid; /* Use CSS Grid for flexible card layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  gap: 25px; /* Space between cards */
+  margin-bottom: 40px;
+}
+
+.summary-card {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* More prominent shadow on hover */
+}
+
+.summary-card h3 {
+  color: #34495e;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.card-value {
+  font-size: 48px; /* Large number */
+  font-weight: bold;
+  color: #007bff; /* Primary color for values */
+  line-height: 1; /* Adjust line height for numbers */
+}
+
+/* Optional: Styling for other dashboard sections */
+.dashboard-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  margin-top: 30px;
+}
+
+.dashboard-section h3 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.dashboard-section p {
+  color: #555;
+  line-height: 1.6;
+}

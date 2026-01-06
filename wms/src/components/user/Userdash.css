@@ -1,0 +1,44 @@
+@import './user-theme.css';
+
+.user-dash-container {
+  display: flex;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: var(--u-surface);
+}
+
+.stats-container {
+  display: flex;
+  gap: 20px; /* Adds space between the cards */
+  justify-content: center;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px; /* Or adjust as needed */
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px); /* Adds a slight lift effect on hover */
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.stat-card .amount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--u-primary);
+  margin-bottom: 0;
+}

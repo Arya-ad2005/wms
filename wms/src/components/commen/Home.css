@@ -1,0 +1,115 @@
+/* --- Home.css --- */
+
+/* 1. Full Page Wrapper (Optional, depends on full application layout) */
+.home-page-wrapper {
+    /* Ensures the header takes up the remaining viewport height */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Hero Section Container */
+.home-container {
+    position: relative;
+    width: 100%;
+    /* Set height to cover the viewport minus the Navbar height */
+    min-height: calc(100vh - 70px); 
+    
+    /* Center the content */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden;
+    padding: 20px; /* Internal padding for smaller screens */
+}
+
+/* 3. Background Image Styling */
+.waste-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1; 
+    
+    /* Strong visual treatment: Dark overlay for text contrast */
+    filter: brightness(30%) contrast(110%); 
+    transition: filter 0.5s ease;
+}
+
+/* 4. Text Content Overlay */
+.text-content {
+    position: relative;
+    z-index: 5; 
+    color: #ffffff; /* White text for maximum contrast */
+    text-align: center;
+    max-width: 800px;
+    padding: 40px;
+    /* Clean, subtle box shadow to lift content off the background */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7); 
+    border-radius: 10px;
+    /* Optional: Add a light border to frame the text */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 0.8rem;
+    /* Theme color: a vibrant green */
+    color: #4CAF50; 
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+    letter-spacing: 3px;
+}
+
+.home-description {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* 5. Call to Action Button */
+.cta-button {
+    background-color: #4CAF50; /* Primary green */
+    color: white;
+    border: none;
+    padding: 16px 45px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    border-radius: 5px; /* Square edges for a solid look */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Strong button shadow for depth */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* 6. Mobile Responsiveness */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+    .home-description {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+    .text-content {
+        padding: 20px;
+    }
+}

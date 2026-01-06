@@ -1,0 +1,99 @@
+
+.register-page-wrapper {
+    /* Using a very light off-white/grey for a clean look */
+    background-color: #f8f9fa; 
+    padding: 40px 0; /* Increased vertical padding for better spacing */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    display: flex; /* Helps ensure centering when using the class directly */
+    align-items: center;
+}
+
+/* 
+ * 2. Card Styles
+ * Modern styling with soft shadow and rounded corners.
+ */
+.register-card {
+    border-radius: 1rem; /* Rounded corners */
+    border: none;
+    overflow: hidden;
+    /* Stronger, softer shadow for a 'floating' effect */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15); 
+}
+
+/* 
+ * 3. Heading/Text Styles
+ */
+.register-heading {
+    /* Set the heading color to a clear, professional green */
+    color: #28a745; /* Bootstrap's success/green color */
+    font-weight: 700;
+}
+
+/* 
+ * 4. Customizing Form Elements (Inputs)
+ * Making inputs more modern and user-friendly.
+ */
+.form-control {
+    border-radius: 0.5rem; /* Slightly more rounded inputs */
+    padding: 0.75rem 1rem; /* Taller inputs for easier tapping/clicking */
+}
+
+/* Focus state customization - Use a green outline for brand consistency */
+.form-control:focus {
+    border-color: #28a745; /* Green border on focus */
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25); /* Light green shadow */
+}
+
+/* 
+ * 5. Button Styles
+ * Custom styles for the submit button (which uses variant="primary" in JS, 
+ * but we style it to look green here by relying on Bootstrap's primary color override 
+ * or targeting it directly if necessary).
+ */
+
+/* Target the Register Button which has class 'register-submit-button' 
+   and is styled as primary in the JSX */
+.register-submit-button {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.register-submit-button:hover {
+    transform: translateY(-2px); /* Slightly more noticeable lift */
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.3);
+}
+
+/* Cancel/Reset Button */
+.register-cancel-button {
+    border-radius: 0.5rem;
+}
+
+/* 
+ * 6. Responsiveness & Media Queries
+ * Ensures nice padding on smaller screens.
+ */
+@media (max-width: 767px) {
+    .register-card .card-body {
+        /* Important is used to override any default bootstrap padding */
+        padding: 30px !important; 
+    }
+    
+    .register-page-wrapper {
+        padding: 20px 10px; /* Reduce horizontal padding on small devices */
+    }
+}
+
+
+/* 
+ * 7. (Optional but recommended) Bootstrap Theme Override
+ * If you want ALL primary buttons/links (including the submit button 
+ * with variant="primary") to be green, you can override the variable:
+ */
+:root {
+    --bs-primary: #28a745; /* Green */
+    --bs-primary-rgb: 40, 167, 69;
+}
+/* If the above override is not used, you would explicitly style:
+   .btn-primary { background-color: #28a745 !important; border-color: #28a745 !important; } 
+*/
