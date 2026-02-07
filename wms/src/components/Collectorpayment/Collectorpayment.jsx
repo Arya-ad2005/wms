@@ -11,10 +11,26 @@ function CollectorPayment() {
   const [expiry, setExpiry] = useState('');
   const [cvv, setCvv] = useState('');
 
-
   const navigate = useNavigate()
+  
+  // Get collector id from params or localStorage
+  const getCollectorId = () => {
+    if (id && !id.startsWith(':')) {
+      return id;
+    }
+    const collector = JSON.parse(localStorage.getItem('collector'));
+    return collector?._id;
+  }
+  
+  const collectorId = getCollectorId();
+  
   const handlePayment = async (e) => {
     e.preventDefault();
+
+    if (!amount || parseFloat(amount) <= 0) {
+      alert("Please enter a valid amount");
+      return;
+    }
 
     const paymentData = {
       paymentStatus: "completed",
@@ -29,13 +45,17 @@ function CollectorPayment() {
       .then((result) => {
         console.log(result.data);
         alert("Payment completed successfully!");
-        navigate('/collecterpickup/:id');
+        navigate(`/collecterpickup/${collectorId}`);
       })
       .catch((error) => {
         console.log(error);
-
+        alert("Payment failed. Please try again.");
       })
 
+  };
+
+  const handleCancel = () => {
+    navigate(`/collecterpickup/${collectorId}`);
   };
 
   return (
@@ -88,6 +108,7 @@ function CollectorPayment() {
         )}
 
         <button className='buttn-payment' type="submit">Pay Now</button>
+        {/* <button className='buttn-cancel' type="button" onClick={handleCancel}>Cancel</button> */}
       </form>
     </div>
   );

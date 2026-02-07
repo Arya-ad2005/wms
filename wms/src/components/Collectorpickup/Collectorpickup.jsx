@@ -94,23 +94,25 @@ function Collectorpickup() {
             <h3>Collector Status: {item.collectorStatus || 'Not Informed'}</h3>
             <h3>Payment Status: {item.paymentStatus}</h3>
 
-            <div className="pickup-actions">
-              <button
-                className="btn-ready"
-                onClick={() => handleReadyToPickup(item._id)}
-              >
-                Ready to Pickup
-              </button>
+            {item.paymentStatus !== 'completed' && (
+              <div className="pickup-actions">
+                <button
+                  className="btn-ready"
+                  onClick={() => handleReadyToPickup(item._id)}
+                >
+                  Ready to Pickup
+                </button>
 
-              <select
-                className="payment-select"
-                value={item.paymentStatus || 'Pending'}
-                onChange={(e) => handlePaymentStatus(item._id, e.target.value)}
-              >
-                <option value="Pending">Pending</option>
-                <option value="completed">Completed</option>
-              </select>
-            </div>
+                <select
+                  className="payment-select"
+                  value={item.paymentStatus || 'Pending'}
+                  onChange={(e) => handlePaymentStatus(item._id, e.target.value)}
+                >
+                  <option value="Pending">Pending</option>
+                  <option value="completed">Completed</option>
+                </select>
+              </div>
+            )}
           </div>
         ))}
       </div>
