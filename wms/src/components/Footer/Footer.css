@@ -1,0 +1,28 @@
+/* footer */
+.footer{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e8eee8b4;
+  /* background-color: #7fc47fb4; */
+  /* gap: 20px; */
+  height: 35px;
+  padding-top: 10px;
+  text-align: justify;
+}
+.Privacy{
+  padding:1px 0px;
+  margin-left: 40px;
+  /* margin-bottom: 80px; */
+}
+.copyright{
+  margin-left: 850px;
+
+}
+.terms{
+  margin-left: 19px;
+}
+
+

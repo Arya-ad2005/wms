@@ -1,0 +1,90 @@
+/* Userdash.css */
+
+/* General page styling helper (optional, makes the background look nice) */
+body {
+  background-color: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Main Heading Styling */
+.user-mainhead {
+  text-align: center;
+  color: #2e7d32; /* Forest Green */
+  font-size: 2.5rem;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* The wrapper that holds the cards side-by-side */
+.user-container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows stacking on mobile */
+  gap: 40px; /* Space between cards */
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Card Styling */
+.user-container {
+  background-color: #ffffff;
+  width: 300px;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 6px solid #4caf50; /* Green accent bar on top */
+}
+
+/* Card Hover Effect */
+.user-container:hover {
+  transform: translateY(-10px); /* Moves up slightly */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings inside the card */
+.user-container h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+/* The Button/Link Styling */
+.profile-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.profile-link:hover {
+  background-color: #2e7d32; /* Darker green on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .user-mainhead {
+    font-size: 2rem;
+  }
+  
+  .user-container-form {
+    flex-direction: column;
+  }
+  
+  .user-container {
+    width: 100%;
+    max-width: 350px;
+  }
+}

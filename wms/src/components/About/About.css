@@ -1,0 +1,156 @@
+/* --- Global & Header Styles --- */
+.sustain-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden; /* Prevents scrollbar from negative margins */
+}
+
+.sustain-head {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    max-width: 800px;
+}
+
+.sustain-title {
+    font-weight: 800;
+    font-size: 3.5rem; /* Large and bold */
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.sustain-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- Overlap Section Styles --- */
+.sustain-overlap-section {
+    padding: 50px 0;
+    margin-bottom: 80px;
+}
+
+.overlap-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* The Image Container */
+.overlap-image-box {
+    position: relative;
+    z-index: 2; /* Sits on top */
+    flex: 0 0 45%; /* Takes up 45% width */
+}
+
+.overlap-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 5px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* The Text Container */
+.overlap-text-box {
+    background: #f8f9fa; /* Light grey background */
+    padding: 60px 40px 60px 80px; /* Extra left padding to clear the image overlap */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Sits behind image slightly */
+    flex: 0 0 55%; /* Takes up 55% width */
+    margin-left: -80px; /* Pulls the text box LEFT underneath the image */
+    margin-top: 50px; /* Push it down slightly for the design effect */
+}
+
+.overlap-title {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight-text {
+    color: #27ae60; /* Green highlight */
+}
+
+.overlap-desc {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-left: 10px;
+}
+
+/* --- Bottom Grid Section --- */
+.sustain-body-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Card Styles */
+.recycle-card {
+    background-color: var(--card);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.recycle-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    border-color: #27ae60;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #27ae60;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 991px) {
+    /* Stack the overlap section vertically on tablets/mobiles */
+    .overlap-wrapper {
+        flex-direction: column;
+    }
+
+    .overlap-image-box {
+        flex: 100%;
+        max-width: 100%;
+        margin-bottom: -40px; /* Pull text box up slightly */
+    }
+
+    .overlap-text-box {
+        flex: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        padding: 60px 30px 40px 30px; /* Reset padding */
+        text-align: center;
+        width: 100%;
+    }
+    
+    .sustain-title {
+        font-size: 2.5rem;
+    }
+}

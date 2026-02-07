@@ -1,0 +1,140 @@
+/* --- GLOBAL THEME & RESET --- */
+:root {
+  --primary-green: #2ecc71;
+  --dark-green: #27ae60;
+  --danger-red: #e74c3c;
+  --bg-light: #f4f7f6;
+  --white: #ffffff;
+  --text-main: #2c3e50;
+  --text-muted: #7f8c8d;
+  --sidebar-width: 260px;
+}
+
+body {
+  background-color: var(--bg-light);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  color: var(--text-main);
+}
+
+/* --- LAYOUT FIX: PREVENT OVERLAP WITH SIDEBAR --- */
+.collecter-container-flex {
+  margin-left: var(--sidebar-width);
+  padding: 40px;
+  box-sizing: border-box;
+  width: calc(100% - var(--sidebar-width));
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* --- COLLECTOR CARDS --- */
+.display-users {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  transition: box-shadow 0.3s ease;
+}
+
+.display-users:hover {
+  box-shadow: 0 5px 20px rgba(46, 204, 113, 0.15);
+}
+
+/* FIX: Typography (Reduced size to stop lengthiness) */
+.display-users h3 {
+  font-size: 0.95rem;
+  margin: 8px 0;
+  color: var(--text-muted);
+  font-weight: 500;
+  border-bottom: 1px solid #fafafa;
+  padding-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Highlight the first item (Name) */
+.display-users h3:first-of-type {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  font-weight: bold;
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 12px;
+}
+
+/* --- BUTTONS --- */
+.user-btn-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.button-user-common {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  flex: 1;
+  min-width: 70px;
+  transition: background 0.3s;
+}
+
+.button-user-common:hover:not(:disabled) {
+  background-color: var(--dark-green);
+  transform: scale(1.02);
+}
+
+.button-user-common:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-deactivate {
+  background: var(--danger-red);
+}
+
+.btn-deactivate:hover:not(:disabled) {
+  background: #c0392b;
+}
+
+.btn-activate {
+  background: var(--primary-green);
+}
+
+.btn-activate:hover:not(:disabled) {
+  background: var(--dark-green);
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+  .collecter-container-flex {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .display-users h3 {
+    font-size: 0.9rem;
+  }
+
+  .user-btn-group {
+    gap: 6px;
+  }
+
+  .button-user-common {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

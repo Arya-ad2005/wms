@@ -1,0 +1,50 @@
+.collecter-dashboard {
+    position: fixed;
+    width: 230px;
+    height: 100vh;
+    background-color: darkgray;
+    top: 0;
+    left: 0;
+    padding-top: 40px;
+    color: white;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.collecter-panelheading {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: #f3f4f6;
+}
+
+.collecter-ul {
+    list-style-type: none;
+}
+
+.dash-collecter {
+    margin-bottom: 25px;
+}
+
+.dash-collecter a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 18px;
+    padding: 12px 5px;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.dash-collecter a:hover {
+    background: #848a91;
+    color: white;
+    transform: translateX(3px);
+}
+
+.dash-collecter a:active {
+    background: #4b5563;
+    color: white;
+}

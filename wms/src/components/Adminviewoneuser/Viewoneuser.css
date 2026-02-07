@@ -1,0 +1,6 @@
+/* Admin single user view */
+.user-profile-container{width:640px;margin-left:240px;margin-top:40px;padding:20px;background:var(--admin-card);border-radius:12px;box-shadow:var(--admin-shadow)}
+
+.user-profile-container h1{margin-bottom:12px;font-size:20px;color:var(--admin-accent)}
+
+.user-profile-container p{margin-bottom:8px;color:var(--admin-muted)}

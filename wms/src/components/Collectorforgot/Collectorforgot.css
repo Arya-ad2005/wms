@@ -1,0 +1,98 @@
+/* Collectorforgot.css */
+
+/* 1. Main Background */
+.forgot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* 2. The Form Card */
+.forgot-box {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 400px; /* Standard compact width */
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* Top border accent to match Collector theme */
+  border-top: 5px solid #1b5e20; 
+}
+
+/* 3. Heading */
+.forgot-box h2 {
+  text-align: center;
+  color: #1b5e20; /* Dark Forest Green */
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 4. Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* 5. Labels */
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+/* 6. Inputs */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding doesn't break width */
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+.form-group input:focus {
+  outline: none;
+  border-color: #1b5e20; /* Dark Green border on focus */
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(27, 94, 32, 0.2);
+}
+
+/* 7. Reset Button */
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #1b5e20; /* Dark Forest Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover */
+.reset-btn:hover {
+  background-color: #4caf50; /* Lighter Green on hover */
+}
+
+/* 8. Mobile Responsiveness */
+@media (max-width: 480px) {
+  .forgot-box {
+    padding: 25px;
+  }
+
+  .forgot-box h2 {
+    font-size: 1.5rem;
+  }
+}

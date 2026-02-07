@@ -1,0 +1,93 @@
+.collecter-container {
+  max-width: 1000px;
+  margin: 80px 250px;
+  padding: 20px 30px;
+  background: #f3f7fa;
+  border-radius: 15px;
+}
+
+.collecter-container h2 {
+  text-align: center;
+  color: #1d3557;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.pickup-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-left: 10px;
+}
+
+.display-pickups-collector {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 18px;
+  width: 310px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease-in-out;
+  border: 1px solid #e3e6e8;
+  gap: 30px;
+}
+
+.display-pickups-collector h3{
+  font-size: medium;
+}
+.display-pickups:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.display-pickups h3 {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #2b2d42;
+  font-weight: 500;
+}
+
+
+
+
+.pickup-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-ready {
+  background: linear-gradient(135deg, #2a9d8f, #21867a);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.btn-ready:hover {
+  background: linear-gradient(135deg, #21867a, #1b6c62);
+  transform: scale(1.05);
+}
+
+.payment-select {
+  padding: 7px 10px;
+  border: 1px solid #b7c4c9;
+  border-radius: 8px;
+  font-size: 13px;
+  width: 110px;
+  background: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.payment-select:hover {
+  border-color: #2a9d8f;
+}

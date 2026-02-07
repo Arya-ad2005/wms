@@ -1,0 +1,205 @@
+/* --- Global --- */
+.comm-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* --- Hero Section --- */
+.comm-hero {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comm-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.comm-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darkens image */
+    z-index: 1;
+}
+
+.comm-hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.comm-hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.comm-hero-text p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Content / Grid Section --- */
+.comm-content-wrapper {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.comm-card-container {
+    background: white;
+    width: 100%;
+    max-width: 1100px;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.comm-card-container h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.comm-subtitle {
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+.comm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.comm-card {
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.comm-card:hover {
+    transform: translateY(-5px);
+    border-color: #8bc34a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.comm-card h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.comm-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- Button Area --- */
+.comm-cta-box {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.comm-cta-box p {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.comm-btn {
+    display: inline-block;
+    background: #2e7d32; /* Green */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.comm-btn:hover {
+    background: #1b5e20; /* Darker Green */
+}
+
+/* --- Footer (Copied for consistency) --- */
+.footerarrangement {
+    background-color: #111;
+    color: white;
+    padding: 60px 8%;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 45px;
+    font-weight: bold;
+    color: #8bc34a;
+    margin-right: 15px; /* Matches your other page */
+    line-height: 1;
+}
+
+.footer-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #444;
+    border: none;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footertext {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-link {
+    color: #cfd8dc;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    color: #8bc34a;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .comm-hero-text h1 { font-size: 2.2rem; }
+    .comm-card-container { padding: 20px; }
+}

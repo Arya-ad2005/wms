@@ -1,0 +1,151 @@
+/* General Page Layout */
+.form-section-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--card);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Heading */
+.form-section-user h2 {
+  text-align: center;
+  color: #1b4d3e; /* Dark Forest Green */
+  margin-bottom: 20px;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+}
+
+/* The Card Container */
+.registration-block-user {
+  background: white;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 50px; /* Space for the absolute heading */
+}
+
+/* Flex Container for Split Layout */
+.two-blocks-user {
+  display: flex;
+  flex-direction: row;
+  min-height: 600px;
+}
+
+/* Left Side - Image Section */
+.col-sm-6-user {
+  flex: 1;
+  background-color: var(--card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-user {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills space without stretching */
+  transition: transform 0.3s ease;
+}
+
+.image-user:hover {
+  transform: scale(1.02);
+}
+
+/* Right Side - Form Section */
+.form-container-right-user {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Form Elements */
+.form-container-user {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-container-user label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+  margin-bottom: -10px; /* Pull input closer to label */
+}
+
+.form-container-user input,
+.form-container-user select,
+.form-container-user textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't break width */
+  transition: border-color 0.3s ease;
+}
+
+/* Focus Effects */
+.form-container-user input:focus,
+.form-container-user select:focus,
+.form-container-user textarea:focus {
+  outline: none;
+  border-color: #2e8b57; /* SeaGreen */
+  box-shadow: 0 0 5px rgba(46, 139, 87, 0.2);
+}
+
+/* File Input Styling */
+.form-container-user input[type="file"] {
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #2e8b57; /* SeaGreen */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1b4d3e; /* Darker Green */
+}
+
+/* Responsive Design (Mobile) */
+@media (max-width: 768px) {
+  .two-blocks-user {
+    flex-direction: column; /* Stack image on top of form */
+  }
+
+  .col-sm-6-user {
+    height: 200px; /* Limit image height on mobile */
+  }
+
+  .form-section-user h2 {
+    position: static; /* Reset heading position */
+    margin-top: 20px;
+  }
+  
+  .registration-block-user {
+    margin-top: 10px;
+  }
+
+  .form-container-right-user {
+    padding: 25px;
+  }
+}

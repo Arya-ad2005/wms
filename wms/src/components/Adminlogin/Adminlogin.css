@@ -1,0 +1,20 @@
+:root{--login-width:420px}
+
+.login-container{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 20px;background-image: url('../../../assets/userloginbackpic.webp');background-repeat:no-repeat;background-size:cover;
+}
+
+.login-box{width:var(--login-width);max-width:100%;background:var(--card);border-radius:14px;padding:28px;box-shadow:var(--shadow);text-align:left}
+
+.login-box h2{margin-bottom:18px;color:var(--primary);font-size:20px}
+
+.form-group{margin-bottom:12px}
+.form-label{display:block;margin-bottom:6px;font-size:14px;color:#0f172a}
+.form-control{width:100%;padding:12px;border-radius:10px;border:1px solid #e6e9ea;font-size:15px}
+.form-control:focus{outline:none;border-color:var(--primary);box-shadow:0 4px 10px rgba(30,86,49,0.08)}
+
+.login-btn{width:100%;padding:12px;border-radius:10px;margin-top:10px}
+
+.form-error{font-size:13px;color:#b91c1c;margin-top:6px}
+
+@media (max-width:640px){.login-box{padding:20px;width:90%}}

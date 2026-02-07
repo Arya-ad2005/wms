@@ -1,0 +1,98 @@
+/* Admindash.css */
+
+:root {
+  --primary-green: #2ecc71;
+  --dark-green: #27ae60;
+  --background-white: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-main: #2c3e50;
+  --text-light: #7f8c8d;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--background-white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: var(--text-main);
+}
+
+/* Header Styling */
+.headingone {
+  text-align: center;
+  color: var(--dark-green);
+  font-size: 2.5rem;
+  margin-top: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Flexbox Container */
+.admin-container-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Cards */
+.admin-container {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 5px solid var(--primary-green);
+}
+
+.admin-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.2);
+}
+
+.admin-container h2 {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Counter Numbers */
+.total-user-and-coll {
+  font-size: 3.5rem;
+  color: var(--primary-green);
+  margin: 10px 0;
+}
+
+/* Buttons Styling */
+.enquiry-viewbtn, .total-user-viewbtn, .total-collecter-viewbtn {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.enquiry-viewbtn:hover {
+  background-color: var(--dark-green);
+}
+
+/* Specific styling for the Enquiry card title */
+.enqryh2 {
+  margin-bottom: 30px;
+}
+
+.link-enqry {
+  text-decoration: none;
+}

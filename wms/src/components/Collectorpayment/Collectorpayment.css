@@ -1,0 +1,89 @@
+/* Page background */
+body {
+  background: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Payment form container */
+.form-payment {
+  width: 100%;
+  max-width: 420px;
+  margin: 120px auto;
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+.form-payment h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* Labels */
+.form-payment label {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Inputs & select */
+.form-payment input,
+.form-payment select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.form-payment input:focus,
+.form-payment select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+}
+
+/* Card fields spacing */
+.form-payment input[type="password"],
+.form-payment input[type="month"] {
+  letter-spacing: 1px;
+}
+
+/* Submit button */
+.buttn-payment {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.buttn-payment:hover {
+  background: linear-gradient(135deg, #43a047, #1b5e20);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .form-payment {
+    margin: 80px 15px;
+    padding: 25px 20px;
+  }
+}

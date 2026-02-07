@@ -1,0 +1,82 @@
+/* Admin Enquiries — Responsive grid and polished cards */
+.admin-enqry-container{
+  max-width: var(--max-width);
+  margin: 80px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.display-enquiries{
+  background: var(--admin-card);
+  border: 1px solid rgba(2,6,23,0.04);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: var(--admin-shadow);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.display-enquiries:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.08);
+}
+
+.display-enquiries h2{
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+  color: var(--admin-accent);
+  font-weight: 700;
+}
+
+.display-enquiries h3{
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  color: var(--admin-primary);
+  font-weight: 600;
+}
+
+.display-enquiries .enquiry-meta{
+  display:flex;gap:12px;align-items:center;margin-bottom:8px;font-size:0.92rem;color:var(--admin-muted);
+}
+
+.display-enquiries p{
+  margin: 0 0 12px 0;
+  color: var(--admin-muted);
+  line-height: 1.45;
+  font-size: 0.94rem;
+  max-height: 5.5rem; /* roughly 4 lines */
+  overflow: hidden;
+}
+
+.display-enquiries .read-more{
+  color: var(--admin-primary);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.enquiry-actions{
+  margin-top: auto; /* push actions to bottom */
+  display:flex;gap:10px;justify-content:flex-end;align-items:center
+}
+
+.enquiry-actions .btn{
+  padding:8px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:600;font-size:0.9rem
+}
+
+.enquiry-actions .btn-reply{background:var(--admin-primary);color:#fff}
+.enquiry-actions .btn-delete{background:#fff;border:1px solid #eee;color:#e11d48}
+
+/* Empty state */
+.admin-enqry-empty{max-width:var(--max-width);margin:120px auto;text-align:center;color:var(--admin-muted)}
+
+@media (max-width:640px){
+  .admin-enqry-container{grid-template-columns:1fr;padding:0 12px;margin:40px auto}
+  .display-enquiries{padding:16px}
+}

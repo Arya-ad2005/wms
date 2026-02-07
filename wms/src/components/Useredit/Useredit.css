@@ -1,0 +1,120 @@
+/* userEdit.css */
+
+/* Main Wrapper */
+.form-section {
+    background-color: #f4f7f6; /* Light grey background */
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Page Heading */
+.form-section-h2 {
+    color: #2e7d32; /* Forest Green */
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Container to center the form */
+.two-blocks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container-right {
+    width: 100%;
+    max-width: 500px; /* Limits width so it looks like a card */
+}
+
+/* The Actual Form Card */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid #4caf50; /* Green accent on top */
+}
+
+/* Labels */
+.form-container label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+/* Inputs, Textarea, and Select Box */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container input[type="file"],
+.form-container textarea,
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't widen the element */
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background-color: #fafafa;
+}
+
+/* Input Focus Effect */
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+    outline: none;
+    border-color: #4caf50;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+/* File Input Specific Styling */
+.form-container input[type="file"] {
+    padding: 10px;
+    background-color: white;
+}
+
+/* Textarea Resize */
+.form-container textarea {
+    resize: vertical; /* Allows user to resize vertically only */
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2e7d32; /* Darker green on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+    
+    .form-section-h2 {
+        font-size: 1.5rem;
+    }
+}

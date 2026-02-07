@@ -1,0 +1,97 @@
+/* Userforgot.css */
+
+/* Main Page Background */
+.forgot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7f6; /* Light grey background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The Card Box */
+.forgot-box {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 400px; /* Compact width for login/forgot forms */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #4caf50; /* Signature Green Top Border */
+}
+
+/* Heading */
+.forgot-box h2 {
+  text-align: center;
+  color: #2e7d32; /* Forest Green */
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Group Wrapper */
+.form-group-forgot {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.forgot-label {
+  display: block;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+.input-forgot {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Prevents padding from breaking width */
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+/* Input Focus State */
+.input-forgot:focus {
+  outline: none;
+  border-color: #4caf50;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Reset Button */
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover State */
+.reset-btn:hover {
+  background-color: #2e7d32; /* Darker green on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .forgot-box {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .forgot-box h2 {
+    font-size: 1.5rem;
+  }
+}

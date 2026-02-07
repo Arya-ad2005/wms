@@ -1,0 +1,103 @@
+/* Collectordash.css */
+
+/* 1. Main Page Wrapper */
+:root { --sidebar-width: 230px; }
+.dashboard-wrapper {
+  background-color: #f4f7f6; /* Light grey background */
+  min-height: 100vh;
+  /* Use padding-left based on sidebar width so content never overlaps */
+  padding: 40px;
+  padding-left: calc(var(--sidebar-width) + 24px);
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Page Title */
+.sidebar-h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Main content container centered and responsive */
+.main-content{
+  display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:40px;max-width:1100px;margin:0 auto;width:100%;}
+
+.sidebar-h2 h2 {
+  color: #1b5e20; /* Dark Forest Green */
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-bottom: 4px solid #4caf50; /* Green underline */
+  padding-bottom: 10px;
+}
+
+/* 3. Container for the Cards */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows cards to stack on smaller screens */
+  gap: 40px; /* Space between cards */
+}
+
+/* 4. Individual Card Styling */
+.coll-container {
+  background-color: #ffffff;
+  width: 300px;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 6px solid #4caf50; /* Green accent on top */
+}
+
+/* Card Hover Effect */
+.coll-container:hover {
+  transform: translateY(-10px); /* Floats up */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Headings */
+.coll-container h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+/* 5. Buttons / Links */
+.pickup-link-coll,
+.profile-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.pickup-link-coll:hover,
+.profile-link:hover {
+  background-color: #1b5e20; /* Darker green on hover */
+}
+
+/* 6. Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* On mobile, Sidebar usually disappears or goes to top, so remove left margin */
+  .dashboard-wrapper {
+    margin-left: 0; 
+    padding: 20px;
+  }
+
+  .sidebar-h2 h2 {
+    font-size: 1.8rem;
+  }
+
+  .coll-container {
+    width: 100%;
+    max-width: 400px;
+  }
+}
